@@ -1,0 +1,157 @@
+<!-- Credit to Chat GPT and Stack Overflow for portions of the code -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>faces</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+		integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="./style.css" rel="stylesheet">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js" defer></script>
+
+	<script src="./script.js" type="module" defer></script>
+</head>
+
+<body>
+	<header class="borders">
+		<div class="title">
+			<h1> Interwoven Faces</h1>
+		</div>
+		<div style="background-color: #02035b;"></div>
+		<div style="background-color: #02035b;">
+		</div>
+		<div
+			style="background-color: #02035b; position: relative; border-left: 16px solid white; box-shadow: 160px 0px 0px 0px #02035b;">
+			<div class="vertical-weave-group-3">
+				<div class="vertical-weave" style="height: 200%; top: -100%;">
+				</div>
+				<div class="vertical-weave" style="height: 200%; top: -100%;">
+				</div>
+				<div class="vertical-weave" style="height: 200%; top: -100%; box-shadow: 16px 0px 0px 0px white;">
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="controls">
+			<label onchange="startImages()">
+				<input id="start" type="radio">
+				<i class="fa-solid fa-play"></i>
+			</label>
+			<button onclick="randomImages()"><i class="fa-solid fa-shuffle"></i></button>
+			<label onchange="stopImages()">
+				<input id="stop" type="radio">
+				<i class="fa fa-solid fa-pause"></i>
+			</label>
+		</div>
+		<!-- eyes carousel -->
+		<div class="carousel-wrapper">
+			<div id="eyes-tone-carousel1" class="tone-carousel carousel slide carousel-container">
+				<div class="vertical-weave-group-2">
+					<div class="vertical-weave" style="background-color: #d70f8c;">
+					</div>
+					<div class="vertical-weave" style="background-color: #e5670b;">
+					</div>
+				</div>
+				<div class="carousel-inner w-100 h-100">
+				</div>
+			</div>
+			<div id="eyes-carousel" class="carousel slide carousel-container">
+				<div class="carousel-inner">
+				</div>
+			</div>
+			<div id="eyes-tone-carousel2" class="tone-carousel carousel slide carousel-container">
+				<div class="vertical-weave-group-2">
+					<div class="vertical-weave" style="background-color: #e5670b;">
+					</div>
+					<div class="vertical-weave" style="background-color: #d70f8c;">
+					</div>
+				</div>
+				<div class="carousel-inner w-100 h-100">
+				</div>
+			</div>
+		</div>
+		<div class="carousel-wrapper">
+			<div id="nose-tone-carousel1" class="tone-carousel carousel slide carousel-container">
+				<div class="vertical-weave-group-3">
+					<div class="vertical-weave">
+					</div>
+					<div class="vertical-weave">
+					</div>
+					<div class="vertical-weave">
+					</div>
+				</div>
+				<div class="carousel-inner w-100 h-100">
+				</div>
+			</div>
+			<div id="nose-carousel" class="carousel slide carousel-container">
+				<div class="carousel-inner">
+				</div>
+			</div>
+			<div id="nose-tone-carousel2" class="tone-carousel carousel slide carousel-container">
+				<div class="vertical-weave-group-3">
+					<div class="vertical-weave">
+					</div>
+					<div class="vertical-weave">
+					</div>
+					<div class="vertical-weave">
+					</div>
+				</div>
+				<div class="carousel-inner w-100 h-100">
+				</div>
+			</div>
+		</div>
+		<!-- mouth carousel -->
+		<div class="carousel-wrapper">
+			<div id="mouth-tone-carousel1" class="tone-carousel carousel slide carousel-container">
+				<div class="vertical-weave-group-2">
+					<div class="vertical-weave" style="background-color: #d70f8c;">
+					</div>
+					<div class="vertical-weave" style="background-color: #e5670b;">
+					</div>
+
+				</div>
+				<div class="carousel-inner w-100 h-100">
+				</div>
+			</div>
+			<div id="mouth-carousel" class="carousel slide carousel-container">
+				<div class="carousel-inner">
+				</div>
+			</div>
+			<div id="mouth-tone-carousel2" class="tone-carousel carousel slide carousel-container">
+				<div class="vertical-weave-group-2">
+					<div class="vertical-weave" style="background-color: #e5670b;">
+					</div>
+					<div class="vertical-weave" style="background-color: #d70f8c;">
+					</div>
+				</div>
+				<div class="carousel-inner w-100 h-100">
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div
+			style="background-color: #320032; position: relative; border-right: 16px solid white; box-shadow: -160px 0px 0px 0px #320032;">
+			<div class="vertical-weave-group-3">
+				<div class="vertical-weave" style="height: 200%; box-shadow: -16px 0px 0px 0px white;">
+				</div>
+				<div class="vertical-weave" style="height: 200%;">
+				</div>
+				<div class="vertical-weave" style="height: 200%;">
+				</div>
+			</div>
+		</div>
+		<div style="background-color: #320032; position: relative; z-index: 10;"></div>
+		<div style="background-color: #320032; position: relative; z-index: 10;">
+		</div>
+	</footer>
+</body>
+
+</html>

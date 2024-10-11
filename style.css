@@ -1,0 +1,202 @@
+/* Credit to Chat GPT and Stack Overflow for portions of the code */
+@import url('https://use.typekit.net/ayy6btn.css');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+html {
+	background-color: white;
+}
+
+body {
+	background: white;
+	color: white;
+	font-family: 'Comfortaa', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+	padding: 3dvw 5dvw;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100dvh;
+	min-width: 100dvw;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.title {
+	font-family: 'bd-colonius', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 10vw;
+	color: rgb(81, 130, 255);
+	position: absolute;
+	height: 5vw;
+	width: 66.66% !important;
+	padding: 0;
+	margin: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+h1 {
+	padding: 0;
+	margin: 0;
+	/* font-size: clamp(1rem, 2.5vw, 2rem); */
+	/* font-size: 0; */
+}
+header,
+footer {
+	position: relative;
+	display: flex;
+	height: 5vw;
+	max-height: 100;
+	width: 100%;
+}
+footer {
+	height: 8vw;
+}
+header > *,
+footer > * {
+	width: 100%;
+	height: 100%;
+}
+.controls {
+	display: flex;
+	width: 100%;
+	font-size: clamp(1rem, 2.5vw, 2rem);
+	gap: 16px;
+	position: relative;
+	z-index: 10;
+}
+button,
+label {
+	all: unset;
+	padding: 0 12px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 5vw;
+
+	width: 100%;
+}
+label > input {
+	appearance: none;
+}
+button {
+	background: rgb(255, 170, 1);
+}
+button:hover {
+	background: rgb(176, 118, 0);
+}
+label:nth-of-type(odd) {
+	background: rgb(117, 180, 0);
+}
+label:nth-of-type(odd):hover {
+	background: rgb(71, 109, 0);
+}
+
+label:nth-of-type(even) {
+	background: rgb(180, 0, 62);
+}
+label:nth-of-type(even):hover {
+	background: rgb(121, 0, 42);
+}
+
+button:hover,
+label:hover {
+	cursor: pointer;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-container {
+	width: 100%;
+	max-width: 600px;
+}
+
+.tone-carousel {
+	/* width: 25%; */
+	background: white;
+	z-index: 1;
+}
+
+.carousel-wrapper {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.carousel-item {
+	max-height: 200px;
+}
+
+.vertical-weave {
+	z-index: 2;
+	position: relative;
+	top: 0;
+	height: 100%;
+}
+
+.vertical-weave-group-3,
+.vertical-weave-group-2 {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+
+	display: flex;
+	height: 100%;
+}
+.vertical-weave-group-2 {
+	justify-content: space-evenly;
+}
+.vertical-weave-group-3 {
+	justify-content: space-between;
+}
+
+.vertical-weave-group-3 > * {
+	width: calc(100% / 6);
+	background-color: #02b194;
+}
+.vertical-weave-group-2 > * {
+	width: 25%;
+}
+
+.carousel {
+	box-sizing: content-box;
+	border: 8px solid white;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.carousel:nth-child(1) {
+	border-left: 0;
+}
+.carousel:nth-child(3) {
+	border-right: 0;
+}
+
+.carousel-wrapper {
+	box-sizing: content-box;
+	border-top: 8px solid white;
+	border-bottom: 8px solid white;
+}
+
+footer {
+	box-sizing: content-box;
+	border-top: 8px solid white;
+}
+
+.controls {
+	border-top: 16px solid white;
+	border-bottom: 8px solid white;
+}
